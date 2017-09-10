@@ -1,0 +1,36 @@
+<section>
+  <div class="col-md-12">
+    <button class="btn btn-lg" id="checkoutButton">Proceed to Checkout</button>
+    <div class="row col-md-12">
+      <h3 class="textPosition well"><span ng-show="cart != 0">Total Cart {{ updateTotal() | currency }}</span><span ng-show="cart == 0">Cart is Empty</span></h3>
+    </div>
+  </div>
+  <section class="row container" ng-repeat="product in cart">
+    <div class="col-md-12">
+      <h2>{{ product.ProductName }} by {{ product.Artist }} added to cart.</h2>
+    </div>
+    <div class="col-md-3" ng-click="linkProduct(product)">
+      <img class="cartPic" ng-src="{{ product.ImageUrl }}" alt="">
+    </div>
+    <div class="col-md-3">
+      <h3>{{ product.Price | currency }}</h3>
+      <h4 ng-click="removeItemCart(product.Id)">Remove</h4>
+    </div>
+    <div class="col-md-6 totalCost">
+      <h6>Estimated Shipping<span class="prices">$5.00</span></h6>
+      <h4>Item(s) Total<span class="prices">{{ product.Price | currency }}</span></h4>
+    </div>
+  </section>
+  <section class="relatedProducts">
+    <div class="col-md-12 well">
+      <h2>Related Products</h2>
+      <div class="col-md-3 pointer" ng-repeat="product in products | orderBy: 'orderNumber' | limitTo: 4" ng-click="linkProduct(product)">
+        <img class="relatedPic" ng-src="{{ product.ImageUrl }}" alt="">
+        <div class="row text-center productInfo">
+          <p>{{ product.ProductName }} by {{ product.Artist }}</p>
+          <p>{{ product.Price | currency }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

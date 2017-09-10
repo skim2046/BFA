@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="buyApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BFA - Buy Fine Art</title>
+  <!--jQuery 3.1.1-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <!--Google Font-->
+  <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+  <!--Bootstrap 3.3.7-->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <!--Bootstrap JS 3.3.7-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <!--Custom CSS-->
+  <link rel="stylesheet" href="./CSS/style.css">
+  <!--Angular 1.5.7-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+  <!--Angular UI Router 0.4.2-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container" ng-controller="homeController">
+    <section class="row col-md-12" id="titleLogo">
+      <a href="#"><img class="logo" src="./images/logoNoBorder.png" /></a>
+      <span style="margin-left: 10px">Buy Fine Art</span>
+      <span id="textPlace">A Marketplace for Original Works</span>
+      <span id="register">
+        <a ui-sref="register" class="btn signInButton">Register</a>
+        <a ui-sref="cart">
+          <img id="shopCart" src="./images/28468-200.png" />
+          <span id="shopCount" ng-hide="cart == 0">{{ cart.length }}</span>
+      </a>
+      </span>
+    </section>
+    <nav class="row col-md-12">
+      <button class="dropbtn"><a href="#">Home</a></button>
+      <div class="dropdown">
+        <button class="dropbtn">Artists</button>
+        <div class="dropdown-content">
+          <a href="https://stevenkimxi.github.io/BFA/#/artists?type=Illustrators">Illustrators</a>
+          <a href="https://stevenkimxi.github.io/BFA/#/artists?type=Painters">Painters</a>
+          <a href="https://stevenkimxi.github.io/BFA/#/artists?type=Sculptors">Sculptors</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Commissions</button>
+        <div class="dropdown-content">
+          <a ui-sref="commissions">Request a Commission Piece</a>
+        </div>
+        <span id="demoStyle">DEMO</span>
+      </div>
+    </nav>
+    <div ui-view autoscroll="true"></div>
+    <br>
+    <div class="row">
+      <img id="bottomPic" src="./images/ScarletWitch.png" alt=""><span style="font-size: 20px">We offer a marketplace for Artists to sell original works directly to you!</span>
+    </div>
+    <footer class="row well">
+      <div class="col-md-4">
+        <h5>About Us</h5>
+        <h5>FAQ</h5>
+        <h5>Shipping Policy</h5>
+        <h5>Return Policy</h5>
+        <h5>Contact Us</h5>
+      </div>
+      <div class="col-md-4">
+        <h5>Gift Card</h5>
+        <h5>Blog</h5>
+        <h5>Careers</h5>
+        <h5>Press</h5>
+        <h5>Affiliates</h5>
+      </div>
+      <div class="col-md-4">
+        <h5>Facebook</h5>
+        <h5>Twitter</h5>
+        <h5>Pinterest</h5>
+        <h5>Instagram</h5>
+      </div>
+    </footer>
+  </div>
+  <script src="./app.js"></script>
+  <script src="./controllers/artistsController.js"></script>
+  <script src="./controllers/productsController.js"></script>
+  <script src="./controllers/homeController.js"></script>
+  <script src="./controllers/emailController.js"></script>
+  <script src="./controllers/cartController.js"></script>
+  <script src="./controllers/registerController.js"></script>
+  <script src="./services/artistsService.js"></script>
+  <script src="./services/productsService.js"></script>
+  <script src="./services/emailService.js"></script>
+  <script src="./services/cartService.js"></script>
+  <script src="./services/registerService.js"></script>
+</body>
+
+</html>

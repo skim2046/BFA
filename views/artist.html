@@ -1,0 +1,35 @@
+<section>
+  <div>
+    <img class="girlPicHeader" src="https://stevenkimxi.github.io/BFA/images/agirl.jpg" alt=""><span id="artists">{{ currentArtist.FirstName }} {{ currentArtist.LastName }}</span>
+  </div>
+  <div class="input-group col-md-12">
+    <input ng-model="searchProductName" type="text" class="form-control" placeholder="Search by Works Name...">
+  </div>
+  <section>
+    <section class="container">
+      <div class="row text-center">
+        <h2>Featured Works by {{ currentArtist.FirstName }} {{ currentArtist.LastName }}</h2>
+      </div>
+      <section class="row">
+        <div class="col-md-4 pointer" ng-repeat="product in products | filter: {ArtistId: currentArtist.Id} | orderBy: 'orderNumber' | filter: {ProductName: searchProductName}" ng-click="linkProduct(product)">
+          <img class="productPic" ng-src="{{ product.ImageUrl }}" alt="">
+          <div class="row text-center productInfo">
+            <p>{{ product.ProductName }}</p>
+            <p>{{ product.Price | currency }}</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+  <div class="well">
+    <div class="row text-center">
+      <h2>Featured Artists</h2>
+    </div>
+    <section class="row">
+      <div class="col-md-4 pointer" ng-repeat="artist in artists" ng-click="linkArtist(artist)">
+        <h3>{{ artist.FirstName }} {{ artist.LastName }}</h3>
+      </div>
+    </section>
+  </div>
+  <section>
+  </section>

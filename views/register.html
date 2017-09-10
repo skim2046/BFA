@@ -1,0 +1,61 @@
+<section>
+  <section class="row">
+    <h2 class="signUpHeader">Please Sign Up</h2>
+    <div class="row col-md-12">
+      <form name="registerForm">
+        <div class="col-md-8 col-md-offset-2 well">
+          <label for="firstName">First Name</label>
+          <input name="firstName" type="text" class="form-control" placeholder="Enter First Name" ng-model="register.firstName" required>
+          <div class="notFilledFont" ng-show="registerForm.firstName.$touched && registerForm.firstName.$invalid">First Name must be filled!</div>
+          <label for="lastName">Last Name</label>
+          <input name="lastName" type="text" class="form-control" placeholder="Enter Last Name" ng-model="register.lastName" required>
+          <div class="notFilledFont" ng-show="registerForm.lastName.$touched && registerForm.lastName.$invalid">Last Name must be filled!</div>
+        </div>
+        <div class="col-md-8 col-md-offset-2 well">
+          <label for="email">Your Email Address</label>
+          <input name="email" type="text" class="form-control" placeholder="Enter Email Address" ng-model="register.email" required>
+          <div class="notFilledFont" ng-show="registerForm.email.$touched && registerForm.email.$invalid">Email must be filled!</div>
+        </div>
+        <div class="col-md-8 col-md-offset-2 well">
+          <label for="username">Pick User Name</label>
+          <input name="username" type="text" class="form-control" placeholder="Pick an User Name" ng-model="register.username" required>
+          <div class="notFilledFont" ng-show="registerForm.username.$touched && registerForm.username.$invalid">User Name must be filled!</div>
+          <label for="password">Create Password</label>
+          <input name="password" type="password" class="form-control" placeholder="Create Password" ng-model="register.password">
+          <div class="notFilledFont" ng-show="registerForm.password.$touched && registerForm.password.$invalid">Password must be filled!</div>
+          <label for="password">Re-Enter Password</label>
+          <input name="rePassword" type="password" class="form-control" placeholder="Re-Enter Password" ng-model="register.password"
+            >
+          <div class="notFilledFont" ng-show="registerForm.rePassword.$touched && registerForm.rePassword.$invalid">Password must be filled!</div>
+        </div>
+        <div class="col-md-8 col-md-offset-2 well">
+          <label for="phone">Enter Phone Number</label>
+          <input name="phone" type="text" class="form-control" placeholder="Enter Phone Number" ng-model="register.phone" required>
+          <div class="notFilledFont" ng-show="registerForm.phone.$touched && registerForm.phone.$invalid">Phone Number must be filled!</div>
+          <label for="address">Enter Street Address</label>
+          <input name="address" type="text" class="form-control" placeholder="Enter Street Address" ng-model="register.address" required>
+          <div class="notFilledFont" ng-show="registerForm.address.$touched && registerForm.address.$invalid">Street Address must be filled!</div>
+          <div class="col-md-4">
+            <label for="city">City</label>
+            <input name="city" type="text" class="form-control" placeholder="City" ng-model="register.city" required>
+            <div class="notFilledFont" ng-show="registerForm.city.$touched && registerForm.city.$invalid">City must be filled!</div>
+          </div>
+          <div class="col-md-4">
+            <label for="state">State</label>
+            <input name="state" type="text" class="form-control" placeholder="State" ng-model="register.state" required>
+            <div class="notFilledFont" ng-show="registerForm.state.$touched && registerForm.state.$invalid">State must be filled!</div>
+          </div>
+          <div class="col-md-4">
+            <label for="zipcode">Zipcode</label>
+            <input name="zipcode" type="text" class="form-control" placeholder="Zipcode" ng-model="register.zipcode" required>
+            <div class="notFilledFont" ng-show="registerForm.zipcode.$touched && registerForm.zipcode.$invalid">Zipcode must be filled!</div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <button class="btn btn-lg continueButton" ng-click="submitRegister(register)">Submit</button>
+      <div class="isSubmitted" ng-if="isSubmitted">Your message has been submited. Thank you.</div>
+    </div>
+  </section>
+</section>

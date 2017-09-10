@@ -1,0 +1,208 @@
+body {
+  margin: 20px;
+  font-family: 'Titan One', cursive;
+}
+a {
+  color: #333333;
+}
+a:hover {
+  color: #333333
+}
+a:visited {
+  text-decoration: none;
+  color:#333333
+}
+a:link {
+  text-decoration: none;
+}
+.logo {
+  width: 130px;
+  border-radius: 15px;
+}
+#titleLogo {
+  font-size: 40px;
+}
+#textPlace {
+  font-size: 16px;
+  margin-left: 30px;
+}
+#register {
+  font-size: 18px;
+  margin-top: 21px;
+  float: right;
+}
+#shopCart{
+  width: 45px;
+  margin-left: 20px;
+}
+nav {
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #eee;
+}
+#demoStyle {
+  font-size: 18px;
+  color: #FE0000;
+}
+.sellButton {
+  background-color: #DCD0FE;
+  font-size: 16px;
+  float: right;
+  margin: 5px;
+}
+.girlPicHeader {
+  width: 325px;
+}
+.productPic {
+  width: 300px;
+  height: 400px;
+  border-radius: 5px;
+}
+footer {
+  margin: 20px;
+}
+#artists {
+  font-size: 50px;
+}
+#commissioned {
+  font-size: 24px;
+}
+#inputField {
+  margin: 20px;
+}
+#homeText {
+  font-size: 24px;
+}
+#logoNoBorder {
+  margin-bottom: 12px;
+}
+#bottomPic {
+  width: 300px;
+}
+.productInfo {
+  margin-right: 56px;
+}
+.productPagePic {
+  border-radius: 5px;
+  width: 500px;
+  }
+.productPage {
+  margin-top: 50px;
+}
+.itemDetails {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.relatedPic {
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+}
+.commissionSubmit {
+  float: right;
+  margin: 10px;
+  background-color: #DCD0FE
+}
+.notFilledFont {
+  font-size: 14px;
+  color: #D0021B
+}
+.isSubmitted {
+  font-size: 24px;
+  color: #50B948
+}
+.pointer {
+    cursor: pointer;
+}
+.cartPic {
+  width: 200px;
+}
+#quailtyItems {
+  margin-top: 20px;
+}
+.totalCost {
+  margin-top: 230px;
+}
+.prices {
+  float: right;
+}
+#checkoutButton {
+  float: right;
+  background-color: #DCD0FE;
+}
+.relatedProducts {
+  margin-top: 50px;
+}
+.continueButton {
+  float: right;
+  background-color: #DCD0FE
+}
+.numbersTotal {
+  float: right;
+}
+.submitOrder {
+  margin-bottom: 20px;
+}
+.textPosition {
+  text-align: center;
+  font-size: 30px;
+}
+.signUpHeader {
+  text-align: center;
+  margin: 20px;
+}
+#shopCount {
+  margin-left: 4px;
+  font-size: 22px;
+  color: #D0021B;
+}
+.signInButton {
+  background-color: #DCD0FE;
+  margin-left: 20px;
+}
+.portButton {
+  background-color: #E4A911;
+  margin-left: 20px;
+}
+.searchBar {
+  margin-bottom: 20px;
+}
+.addCartButton {
+  background-color: #DCD0FE;
+}
+.commissionFormsFont {
+  color: #D0021B;
+}
+.dropbtn {
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: #333333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+  }
+.dropdown:hover .dropdown-content {
+    display: block;
+}

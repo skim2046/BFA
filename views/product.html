@@ -1,0 +1,34 @@
+<section>
+  <section class="row">
+    <div class="col-md-6 productPage">
+      <img class="productPagePic" ng-src="{{ currentProduct.ImageUrl }}" alt="">
+    </div>
+    <div class="col-md-6 productPage">
+      <h1>{{ currentProduct.ProductName }} by {{ currentProduct.Artist }}</h1>
+      <h3>{{ currentProduct.Price | currency }}</h3>
+      <p>Only One Available</p>
+      <button class="btn btn-lg btn-block addCartButton" ng-click="linkCart(currentProduct)">Add to Cart</button>
+      <h3>Overview</h3>
+      <ul>
+        <li>{{ currentProduct.Surface }}</li>
+        <li>{{ currentProduct.Materials }}</li>
+        <li>{{ currentProduct.Width }} Inches by {{ currentProduct.Height}} Inches</li>
+        <li>Shipped worldwide from United States</li>
+      </ul>
+    </div>
+    <div class="col-md-12 itemDetails">
+      <h2>Item Details</h2>
+      <h4>{{ currentProduct.ItemDetails }}</h4>
+    </div>
+    <div class="col-md-12 well">
+      <h2>Related Products</h2>
+      <div class="col-md-3 pointer" ng-repeat="product in products | orderBy: 'orderNumber' | limitTo: 4" ng-click="linkProduct(product)">
+        <img class="relatedPic" ng-src="{{ product.ImageUrl }}" alt="">
+        <div class="row text-center productInfo">
+          <p>{{ product.ProductName }} by {{ product.Artist }}</p>
+          <p>{{ product.Price | currency }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
